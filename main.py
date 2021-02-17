@@ -890,10 +890,13 @@ def linearRegression(homeTeam,awayTeam):
         #print(y_test.describe())
         ##Evaluate Linear Regression Accuracy using Root Mean Square Error
         RMSE = sqrt(mean_squared_error(y_true=y_test, y_pred=y_prediction))
-        formatted_RMSE = "{:.2f}".format(RMSE)
+        #formatted_Home_RMSE = "{:.2f}".format(RMSE)
+        formatted_Home_RMSE = round(RMSE)
 
 
-        print("\nPredicted amount of goals using Linear Regression for {0}\nin their next game against {2} is: {1}".format(homeTeam, formatted_RMSE,awayTeam))
+
+        print("\nPredicted amount of goals using Linear Regression for {0}\nin their next game against {2} is: {1}".format(homeTeam, formatted_Home_RMSE,awayTeam))
+
 
         ##Decision Tree Regressor - Fit a new regression model to the training set
         regressor = DecisionTreeRegressor(max_depth=20)
@@ -905,8 +908,10 @@ def linearRegression(homeTeam,awayTeam):
 
         ##Evaluate Decision Tree Regression Accuracy using Root Mean Square Error
         RMSE2 = sqrt(mean_squared_error(y_true=y_test, y_pred=y_prediction))
-        formatted_RMSE2 = "{:.2f}".format(RMSE2)
-        print("\nPredicted amount of goals using Decision Tree Regression for {0}\nin their next game against {2} is: {1}".format(homeTeam, formatted_RMSE2,awayTeam))
+        #formatted_Home_RMSE2 = "{:.2f}".format(RMSE2)
+        formatted_Home_RMSE2 = round(RMSE2)
+        print("\nPredicted amount of goals using Decision Tree Regression for {0}\nin their next game against {2} is: {1}".format(homeTeam, formatted_Home_RMSE2,awayTeam))
+
 
 
     except:
@@ -953,10 +958,10 @@ def linearRegression(homeTeam,awayTeam):
         #print(y_test.describe())
         ##Evaluate Linear Regression Accuracy using Root Mean Square Error
         RMSE = sqrt(mean_squared_error(y_true=y_test, y_pred=y_prediction))
-        formatted_RMSE = "{:.2f}".format(RMSE)
+        #formatted_Away_RMSE = "{:.2f}".format(RMSE)
+        formatted_Away_RMSE = round(RMSE)
 
-
-        print("\nPredicted amount of goals using Linear Regression for {0}\nin their next game against {2} is: {1}".format(awayTeam, formatted_RMSE,homeTeam))
+        print("\nPredicted amount of goals using Linear Regression for {0}\nin their next game against {2} is: {1}".format(awayTeam, formatted_Away_RMSE,homeTeam))
 
         ##Decision Tree Regressor - Fit a new regression model to the training set
         regressor = DecisionTreeRegressor(max_depth=20)
@@ -968,14 +973,19 @@ def linearRegression(homeTeam,awayTeam):
 
         ##Evaluate Decision Tree Regression Accuracy using Root Mean Square Error
         RMSE2 = sqrt(mean_squared_error(y_true=y_test, y_pred=y_prediction))
-        formatted_RMSE2 = "{:.2f}".format(RMSE2)
-        print("\nPredicted amount of goals using Decision Tree Regression for {0}\nin their next game against {2} is: {1}".format(awayTeam, formatted_RMSE2,homeTeam))
+        #formatted_Away_RMSE2 = "{:.2f}".format(RMSE2)
+        formatted_Away_RMSE2 = round(RMSE2)
+        print("\nPredicted amount of goals using Decision Tree Regression for {0}\nin their next game against {2} is: {1}".format(awayTeam, formatted_Away_RMSE2,homeTeam))
+
 
 
     except:
         sg.Popup("No dataset available")
 
+    #formatted_Home_RMSE = round(formatted_Home_RMSE)
+    #formatted_Away_RMSE = round(formatted_Away_RMSE)
 
+    #print("Predicted Match Score {0} : {1} - {2} : {3}".format(homeTeam,formatted_Home_RMSE,awayTeam,formatted_Away_RMSE))
 
 
 
