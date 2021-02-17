@@ -1,0 +1,5 @@
+The chance of home team to win with %95 confidence interval falls in :(0.1932603136587565, 0.6804886874504502)
+--------------------------------------------------------------------------------
+The chance of away team to win with %95 confidence interval falls in :(0.1381200910912131, 0.6093779111272004)
+--------------------------------------------------------------------------------
+The chance of a draw with %95 confidence interval falls in :(0.08894166839405476, 0.5323053349335658)
