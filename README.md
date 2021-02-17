@@ -57,8 +57,7 @@ Demonstrated here is a chart drawn by the Statistical Analysis Function of the p
 
 ![](goals_vs_shots_away.png)
 
-Here we have an example of a dataset that is used for the Machine Learning aspect of the project
-![](img/dataset.png)
+
 
 <h1>Machine Learning</h1>
 Once all data is gathered by the application, the application will need to utilize a machine learning algorithm in order to predict an outcome to a fixture.
