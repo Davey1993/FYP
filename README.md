@@ -16,3 +16,7 @@ Application functionality is currently being developed in Python using a mySQL d
 The application uses an API from rapidapi.com in order to receive up-to-date data required by this application.
 
 The end goal is to deploy this application as a mobile application with the help of ionic framework.
+
+<h1>Dataset</h1>
+
+![](img/dataset.png)
