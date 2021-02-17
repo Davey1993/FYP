@@ -43,7 +43,8 @@ Json Data Structure returned by API
 
 Here we have the UI for the application. It contains a combo box for selecting home and away teams. Also included
 is buttons to save tables to .csv dataset. Buttons also to update and create SQL tables in Database. Each of these functions require 20 API calls per table.
-![](img/ui.png)
+
+![](img/ui1.png)
 
 
 <h1>Dataset</h1>
