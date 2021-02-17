@@ -751,6 +751,8 @@ def logisticRegression(homeTeam,awayTeam):
             dataset = 'ManUHome.csv'
         elif ('Fulham' in homeTeam):
             dataset = 'FulhamHome.csv'
+        elif ('Newcastle' in homeTeam):
+            dataset = 'NewcastleHome.csv'
 
 
         sns.set(style="white")
@@ -796,6 +798,8 @@ def logisticRegression(homeTeam,awayTeam):
             dataset = 'ManUAway.csv'
         elif ('Fulham' in awayTeam):
             dataset = 'FulhamAway.csv'
+        elif ('Newcastle' in awayTeam):
+            dataset = 'NewcastleAway.csv'
 
         sns.set(style="white")
         sns.set(style="whitegrid", color_codes=True)
@@ -851,6 +855,8 @@ def linearRegression(homeTeam,awayTeam):
             dataset = 'ManUHome.csv'
         elif ('Fulham' in homeTeam):
             dataset = 'FulhamHome.csv'
+        elif ('Newcastle' in homeTeam):
+            dataset = 'NewcastleHome.csv'
 
         ##Read Data from the Database into pandas
         df = pd.read_csv(dataset, sep =',',header=0)
@@ -912,6 +918,8 @@ def linearRegression(homeTeam,awayTeam):
             dataset = 'ManUAway.csv'
         elif ('Fulham' in awayTeam):
             dataset = 'FulhamAway.csv'
+        elif ('Newcastle' in awayTeam):
+            dataset = 'NewcastleAway.csv'
 
         ##Read Data from the Database into pandas
         df = pd.read_csv(dataset, sep =',',header=0)
