@@ -65,4 +65,5 @@ Once all data is gathered by the application, the application will need to utili
 The planned approach is to predict match outcomes using Logistic Regression with Python with some aid from a Conference Paper on researchgate.com among some other resources found on towardsdatascience
 Logistic Regression develops a predictive model when the dependent variable is dichotomous and independent variables are categorical. i.e Event of winning in a match based on metrics such as Wins/Losses.
 
+
 ![](img/ml.png)
