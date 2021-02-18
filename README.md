@@ -68,5 +68,11 @@ Logistic Regression develops a predictive model when the dependent variable is d
 
 ![](img/machinelearning.PNG)
 
+<h1>Accuracy vs. Reality</h1>
+Strike-rate currently stands at 50/50, however ongoing comparisons are taking place
+
+![](accuracy/17-02-2021/BurnleyFulham.PNG)
+![](accuracy/17-02-2021/EvertonManCity.PNG)
+
 <h1>Mobile Application</h1>
 Still in development with the help of ionic framework.
