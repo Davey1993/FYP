@@ -266,6 +266,30 @@ def logisticRegression(homeTeam,awayTeam):
             dataset = 'dataset/SouthamptonHome.csv'
         elif ('Arsenal' in homeTeam):
             dataset = 'dataset/ArsenalHome.csv'
+        elif ('Burnley' in homeTeam):
+            dataset = 'dataset/BurnleyHome.csv'
+        elif ('Everton' in homeTeam):
+            dataset = 'dataset/EvertonHome.csv'
+        elif ('Leicester' in homeTeam):
+            dataset = 'dataset/LeicesterHome.csv'
+        elif ('Tottenham' in homeTeam):
+            dataset = 'dataset/TottenhamHome.csv'
+        elif ('West Ham' in homeTeam):
+            dataset = 'dataset/WestHamHome.csv'
+        elif ('Chelsea' in homeTeam):
+            dataset = 'dataset/ChelseaHome.csv'
+        elif ('Brighton' in homeTeam):
+            dataset = 'dataset/BrightonHome.csv'
+        elif ('Crystal Palace' in homeTeam):
+            dataset = 'dataset/CrystalPalaceHome.csv'
+        elif ('West Brom' in homeTeam):
+            dataset = 'dataset/WestBromHome.csv'
+        elif ('Sheffield United' in homeTeam):
+            dataset = 'dataset/SheffieldUnitedHome.csv'
+        elif ('Leeds' in homeTeam):
+            dataset = 'dataset/LeedsHome.csv'
+        elif ('Aston Villa' in homeTeam):
+            dataset = 'dataset/AstonVillaHome.csv'
 
         ##Read Data from the Database into pandas
         df = pd.read_csv(dataset, sep =',',header=0)
@@ -363,6 +387,30 @@ def linearRegression(homeTeam,awayTeam):
             dataset = 'dataset/SouthamptonHome.csv'
         elif ('Arsenal' in homeTeam):
             dataset = 'dataset/ArsenalHome.csv'
+        elif ('Burnley' in homeTeam):
+            dataset = 'dataset/BurnleyHome.csv'
+        elif ('Everton' in homeTeam):
+            dataset = 'dataset/EvertonHome.csv'
+        elif ('Leicester' in homeTeam):
+            dataset = 'dataset/LeicesterHome.csv'
+        elif ('Tottenham' in homeTeam):
+            dataset = 'dataset/TottenhamHome.csv'
+        elif ('West Ham' in homeTeam):
+            dataset = 'dataset/WestHamHome.csv'
+        elif ('Chelsea' in homeTeam):
+            dataset = 'dataset/ChelseaHome.csv'
+        elif ('Brighton' in homeTeam):
+            dataset = 'dataset/BrightonHome.csv'
+        elif ('Crystal Palace' in homeTeam):
+            dataset = 'dataset/CrystalPalaceHome.csv'
+        elif ('West Brom' in homeTeam):
+            dataset = 'dataset/WestBromHome.csv'
+        elif ('Sheffield United' in homeTeam):
+            dataset = 'dataset/SheffieldUnitedHome.csv'
+        elif ('Leeds' in homeTeam):
+            dataset = 'dataset/LeedsHome.csv'
+        elif ('Aston Villa' in homeTeam):
+            dataset = 'dataset/AstonVillaHome.csv'
 
         ##Read Data from the Database into pandas
         df = pd.read_csv(dataset, sep =',',header=0)
@@ -448,6 +496,30 @@ def linearRegression(homeTeam,awayTeam):
             dataset = 'dataset/SouthamptonAway.csv'
         elif ('Arsenal' in awayTeam):
             dataset = 'dataset/ArsenalAway.csv'
+        elif ('Burnley' in awayTeam):
+            dataset = 'dataset/BurnleyAway.csv'
+        elif ('Everton' in awayTeam):
+            dataset = 'dataset/EvertonAway.csv'
+        elif ('Leicester' in awayTeam):
+            dataset = 'dataset/LeicesterAway.csv'
+        elif ('Tottenham' in awayTeam):
+            dataset = 'dataset/TottenhamAway.csv'
+        elif ('West Ham' in awayTeam):
+            dataset = 'dataset/WestHamAway.csv'
+        elif ('Chelsea' in awayTeam):
+            dataset = 'dataset/ChelseaAway.csv'
+        elif ('Brighton' in awayTeam):
+            dataset = 'dataset/BrightonAway.csv'
+        elif ('Crystal Palace' in awayTeam):
+            dataset = 'dataset/CrystalPalaceAway.csv'
+        elif ('West Brom' in awayTeam):
+            dataset = 'dataset/WestBromAway.csv'
+        elif ('Sheffield United' in awayTeam):
+            dataset = 'dataset/SheffieldUnitedAway.csv'
+        elif ('Leeds' in awayTeam):
+            dataset = 'dataset/LeedsAway.csv'
+        elif ('Aston Villa' in awayTeam):
+            dataset = 'dataset/AstonVillaAway.csv'
 
         ##Read Data from the Database into pandas
         df = pd.read_csv(dataset, sep =',',header=0)
