@@ -576,5 +576,6 @@ try:
             sg.popup('Data saved to csv file')
     window.close()
 
+
 except requests.exceptions.ConnectionError:
     r.status_code = "Connection refused"

@@ -66,7 +66,7 @@ The planned approach is to predict match outcomes using Logistic Regression with
 Logistic Regression develops a predictive model when the dependent variable is dichotomous and independent variables are categorical. i.e Event of winning in a match based on metrics such as Wins/Losses.
 
 
-![](img/ml.png)
+![](img/machinelearning.PNG)
 
 <h1>Mobile Application</h1>
 Still in development with the help of ionic framework.
