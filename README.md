@@ -56,7 +56,7 @@ Here we have an example of a dataset that is used for the Machine Learning aspec
 
 Demonstrated here is a chart drawn by the Statistical Analysis Function of the program. 
 
-![](goals_vs_shots_away.png)
+![](img/goals_vs_shots_away.png)
 
 
 
@@ -67,3 +67,6 @@ Logistic Regression develops a predictive model when the dependent variable is d
 
 
 ![](img/ml.png)
+
+<h1>Mobile Application</h1>
+Still in development with the help of ionic framework.
