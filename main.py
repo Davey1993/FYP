@@ -34,7 +34,7 @@ def writeData(newdata):
         mydb = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="irule666"
+            password="pw"
         )
 
         print(mydb)
@@ -87,7 +87,7 @@ def updateData(newdata):
     mydb = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="irule666"
+        password="pw"
     )
 
     print(mydb)
@@ -165,7 +165,7 @@ def save():
     QUERY = 'SELECT * FROM premierLeague;'
     db = dbapi.connect(host="localhost",
         user="root",
-        password="irule666")
+        password="pw")
 
     cur = db.cursor()
     cur.execute("USE footballPrediction;")
@@ -198,7 +198,46 @@ def predicting(homeTeam,awayTeam):
             dataset='dataset/FulhamAway.csv'
         elif('Man United' in awayTeam):
             dataset='dataset/ManUAway.csv'
-
+        if ('Man United' in homeTeam):
+            dataset = 'dataset/ManUHome.csv'
+        elif ('Fulham' in homeTeam):
+            dataset = 'dataset/FulhamHome.csv'
+        elif ('Newcastle' in homeTeam):
+            dataset = 'dataset/NewcastleHome.csv'
+        elif ('Man City' in homeTeam):
+            dataset = 'dataset/ManCHome.csv'
+        elif ('Wolves' in homeTeam):
+            dataset = 'dataset/WolvesHome.csv'
+        elif ('Liverpool' in homeTeam):
+            dataset = 'dataset/LiverpoolHome.csv'
+        elif ('Southampton' in homeTeam):
+            dataset = 'dataset/SouthamptonHome.csv'
+        elif ('Arsenal' in homeTeam):
+            dataset = 'dataset/ArsenalHome.csv'
+        elif ('Burnley' in homeTeam):
+            dataset = 'dataset/BurnleyHome.csv'
+        elif ('Everton' in homeTeam):
+            dataset = 'dataset/EvertonHome.csv'
+        elif ('Leicester' in homeTeam):
+            dataset = 'dataset/LeicesterHome.csv'
+        elif ('Tottenham' in homeTeam):
+            dataset = 'dataset/TottenhamHome.csv'
+        elif ('West Ham' in homeTeam):
+            dataset = 'dataset/WestHamHome.csv'
+        elif ('Chelsea' in homeTeam):
+            dataset = 'dataset/ChelseaHome.csv'
+        elif ('Brighton' in homeTeam):
+            dataset = 'dataset/BrightonHome.csv'
+        elif ('Crystal Palace' in homeTeam):
+            dataset = 'dataset/CrystalPalaceHome.csv'
+        elif ('West Brom' in homeTeam):
+            dataset = 'dataset/WestBromHome.csv'
+        elif ('Sheffield United' in homeTeam):
+            dataset = 'dataset/SheffieldUnitedHome.csv'
+        elif ('Leeds' in homeTeam):
+            dataset = 'dataset/LeedsHome.csv'
+        elif ('Aston Villa' in homeTeam):
+            dataset = 'dataset/AstonVillaHome.csv'
 
 
         df1 = pd.read_csv(dataset, usecols=['HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR','HTR', 'HS', 'AS', 'HST', 'AST'
