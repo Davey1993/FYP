@@ -75,4 +75,4 @@ Strike-rate currently stands at 50/50, however ongoing comparisons are taking pl
 ![](accuracy/17-02-2021/EvertonManCity.PNG)
 
 <h1>Mobile Application</h1>
-Still in development with the help of ionic framework.
+Still in development with the help of django framework and ionic.

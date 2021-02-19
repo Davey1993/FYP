@@ -481,7 +481,7 @@ def linearRegression(homeTeam,awayTeam):
         print(y_prediction)
 
 
-        sg.Print('Prediction for Home Team...', do_not_reroute_stdout=False)
+        #sg.Print('Prediction for Home Team...', do_not_reroute_stdout=False)
 
 
         ##What is the mean of the expected target value in test set ?
@@ -493,7 +493,7 @@ def linearRegression(homeTeam,awayTeam):
 
 
 
-        print("\nPredicted amount of goals using Linear Regression for {0}\nin their next game against {2} is: {1}".format(homeTeam, formatted_Home_RMSE,awayTeam))
+        #print("\nPredicted amount of goals using Linear Regression for {0}\nin their next game against {2} is: {1}".format(homeTeam, formatted_Home_RMSE,awayTeam))
         #print('Mean Absolute Error:', metrics.mean_absolute_error(y_test, y_prediction))
         #print('Mean Squared Error:', metrics.mean_squared_error(y_test, y_prediction))
         #print('Root Mean Squared Error:', np.sqrt(metrics.mean_squared_error(y_test, y_prediction)))
@@ -510,7 +510,7 @@ def linearRegression(homeTeam,awayTeam):
         RMSE2 = sqrt(mean_squared_error(y_true=y_test, y_pred=y_prediction))
         #formatted_Home_RMSE2 = "{:.2f}".format(RMSE2)
         formatted_Home_RMSE2 = round(RMSE2)
-        print("\nPredicted amount of goals using Decision Tree Regression for {0}\nin their next game against {2} is: {1}".format(homeTeam, formatted_Home_RMSE2,awayTeam))
+        #print("\nPredicted amount of goals using Decision Tree Regression for {0}\nin their next game against {2} is: {1}".format(homeTeam, formatted_Home_RMSE2,awayTeam))
 
 
 
@@ -588,7 +588,7 @@ def linearRegression(homeTeam,awayTeam):
 
 
 
-        sg.Print('\nPrediction for Away Team...', do_not_reroute_stdout=False)
+        #sg.Print('\nPrediction for Away Team...', do_not_reroute_stdout=False)
 
         ##What is the mean of the expected target value in test set ?
         #print(y_test.describe())
@@ -597,7 +597,7 @@ def linearRegression(homeTeam,awayTeam):
         #formatted_Away_RMSE = "{:.2f}".format(RMSE)
         formatted_Away_RMSE = round(RMSE)
 
-        print("\nPredicted amount of goals using Linear Regression for {0}\nin their next game against {2} is: {1}".format(awayTeam, formatted_Away_RMSE,homeTeam))
+        #print("\nPredicted amount of goals using Linear Regression for {0}\nin their next game against {2} is: {1}".format(awayTeam, formatted_Away_RMSE,homeTeam))
 
         ##Decision Tree Regressor - Fit a new regression model to the training set
         regressor = DecisionTreeRegressor(max_depth=20)
@@ -611,7 +611,7 @@ def linearRegression(homeTeam,awayTeam):
         RMSE2 = sqrt(mean_squared_error(y_true=y_test, y_pred=y_prediction))
         #formatted_Away_RMSE2 = "{:.2f}".format(RMSE2)
         formatted_Away_RMSE2 = round(RMSE2)
-        print("\nPredicted amount of goals using Decision Tree Regression for {0}\nin their next game against {2} is: {1}".format(awayTeam, formatted_Away_RMSE2,homeTeam))
+       # print("\nPredicted amount of goals using Decision Tree Regression for {0}\nin their next game against {2} is: {1}".format(awayTeam, formatted_Away_RMSE2,homeTeam))
 
 
 
@@ -620,8 +620,11 @@ def linearRegression(homeTeam,awayTeam):
 
     #formatted_Home_RMSE = round(formatted_Home_RMSE)
     #formatted_Away_RMSE = round(formatted_Away_RMSE)
-
-    #print("Predicted Match Score {0} : {1} - {2} : {3}".format(homeTeam,formatted_Home_RMSE,awayTeam,formatted_Away_RMSE))
+    sg.Print("Match Predictions utilizing Machine Learning Algorithms",do_not_reroute_stdout=False)
+    print("-------------------------------------------")
+    print("Predicted Match Score using Linear Regression\n {0} : {1} - {2} : {3}".format(homeTeam,formatted_Home_RMSE,awayTeam,formatted_Away_RMSE))
+    print("-------------------------------------------")
+    print("Predicted Match Score using Decision Tree Regression\n {0} : {1} - {2} : {3}".format(homeTeam,formatted_Home_RMSE2,awayTeam,formatted_Away_RMSE2))
 
 
 
