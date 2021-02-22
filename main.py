@@ -1,6 +1,9 @@
 import csv
 import sys
 from idlelib.multicall import r
+from threading import Thread
+from turtle import pd
+
 import pandas
 import requests
 import json
@@ -275,6 +278,91 @@ def predicting(homeTeam,awayTeam):
         sg.Popup("No Matches")
 
 
+def statistics(homeTeam,awayTeam):
+    import pandas as pd
+
+    import matplotlib.pyplot as plt
+    plt.rc("font", size=14)
+
+    try:
+
+        if ('Man United' in homeTeam):
+            dataset = 'dataset/ManUHome.csv'
+        elif ('Fulham' in homeTeam):
+            dataset = 'dataset/FulhamHome.csv'
+        elif ('Newcastle' in homeTeam):
+            dataset = 'dataset/NewcastleHome.csv'
+        elif ('Man City' in homeTeam):
+            dataset = 'dataset/ManCHome.csv'
+        elif ('Wolves' in homeTeam):
+            dataset = 'dataset/WolvesHome.csv'
+        elif ('Liverpool' in homeTeam):
+            dataset = 'dataset/LiverpoolHome.csv'
+        elif ('Southampton' in homeTeam):
+            dataset = 'dataset/SouthamptonHome.csv'
+        elif ('Arsenal' in homeTeam):
+            dataset = 'dataset/ArsenalHome.csv'
+        elif ('Burnley' in homeTeam):
+            dataset = 'dataset/BurnleyHome.csv'
+        elif ('Everton' in homeTeam):
+            dataset = 'dataset/EvertonHome.csv'
+        elif ('Leicester' in homeTeam):
+            dataset = 'dataset/LeicesterHome.csv'
+        elif ('Tottenham' in homeTeam):
+            dataset = 'dataset/TottenhamHome.csv'
+        elif ('West Ham' in homeTeam):
+            dataset = 'dataset/WestHamHome.csv'
+        elif ('Chelsea' in homeTeam):
+            dataset = 'dataset/ChelseaHome.csv'
+        elif ('Brighton' in homeTeam):
+            dataset = 'dataset/BrightonHome.csv'
+        elif ('Crystal Palace' in homeTeam):
+            dataset = 'dataset/CrystalPalaceHome.csv'
+        elif ('West Brom' in homeTeam):
+            dataset = 'dataset/WestBromHome.csv'
+        elif ('Sheffield United' in homeTeam):
+            dataset = 'dataset/SheffieldUnitedHome.csv'
+        elif ('Leeds' in homeTeam):
+            dataset = 'dataset/LeedsHome.csv'
+        elif ('Aston Villa' in homeTeam):
+            dataset = 'dataset/AstonVillaHome.csv'
+
+        ##Read Data from the Database into pandas
+        df = pd.read_csv(dataset, sep=',', header=0)
+
+        ##Declare the Columns You Want to Use as Features
+        features = ['HTHG', 'HS', 'HST']
+
+        ##Specify the Prediction Target
+        target = ['FTHG']
+        ##Clean Data
+        df = df.dropna()
+
+
+        # sns.countplot(x='FTHG', data=data, palette='hls')
+        # plt.show()
+        # plt.savefig('count_plot')
+
+        # data.groupby('FTHG').mean()
+        # data.groupby('HS').mean()
+        # data.groupby('HST').mean()
+
+        pd.crosstab(df.FTHG, df.HS).plot(kind='bar')
+        plt.title('{} home goals vs. shots'.format(homeTeam))
+        plt.xlabel('Goals')
+        plt.ylabel('Shots')
+        plt.savefig('img/goals_vs_shots_home')
+        plt.show(block=True)
+
+
+        # data.FTHG.hist()
+        # plt.title('Histogram of Home Goals')
+        # plt.xlabel('Goals')
+        # plt.ylabel('Frequency')
+        # plt.savefig('hist_goals')
+
+    except:
+        sg.Popup("No dataset available")
 
 def logisticRegression(homeTeam,awayTeam):
 
@@ -330,6 +418,7 @@ def logisticRegression(homeTeam,awayTeam):
         elif ('Aston Villa' in homeTeam):
             dataset = 'dataset/AstonVillaHome.csv'
 
+
         ##Read Data from the Database into pandas
         df = pd.read_csv(dataset, sep =',',header=0)
 
@@ -364,34 +453,13 @@ def logisticRegression(homeTeam,awayTeam):
 
         sg.Print('Prediction for Home Team...', do_not_reroute_stdout=False)
 
+
         print('Accuracy of logistic regression classifier on test set: {:.2f}'.format(logreg.score(X_test, y_test)))
 
         from sklearn.metrics import confusion_matrix
         confusion_matrix = confusion_matrix(y_test, y_prediction)
         print(confusion_matrix)
 
-
-
-        #sns.countplot(x='FTHG', data=data, palette='hls')
-        #plt.show()
-        #plt.savefig('count_plot')
-
-        #data.groupby('FTHG').mean()
-        #data.groupby('HS').mean()
-        #data.groupby('HST').mean()
-
-        pd.crosstab(df.FTHG, df.HS).plot(kind='bar')
-        plt.title('{} home goals vs. shots'.format(homeTeam))
-        plt.xlabel('Goals')
-        plt.ylabel('Shots')
-        plt.savefig('img/goals_vs_shots_home')
-        plt.show()
-
-        #data.FTHG.hist()
-        #plt.title('Histogram of Home Goals')
-       # plt.xlabel('Goals')
-       # plt.ylabel('Frequency')
-        #plt.savefig('hist_goals')
 
     except:
         sg.Popup("No dataset available")
@@ -659,7 +727,7 @@ try:
         elif event == 'Stats Prediction':
             comboHome = values['combo']
             comboAway = values['combo1']  # use the combo key
-            logisticRegression(comboHome,comboAway)
+            statistics(comboHome,comboAway)
         elif event == 'ML Prediction':
             comboHome = values['combo']
             comboAway = values['combo1']  # use the combo key
