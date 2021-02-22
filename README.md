@@ -73,6 +73,10 @@ Strike-rate currently stands at 50/50, however ongoing comparisons are taking pl
 
 ![](accuracy/17-02-2021/BurnleyFulham.PNG)
 ![](accuracy/17-02-2021/EvertonManCity.PNG)
+![](accuracy/20-02-2021/BurnleyWestBrom.PNG)
+![](accuracy/20-02-2021/ShmptonChelsea.PNG)
+![](accuracy/21-02-2021/ArsenalManCity.PNG)
+![](accuracy/21-02-2021/ManUtdNewcastle.PNG)
 
 <h1>Mobile Application</h1>
 Still in development with the help of django framework and ionic.
