@@ -1,0 +1,25 @@
+[
+    {
+        "homeTeam": [
+            "West Ham"
+        ],
+        "awayTeam": [
+            "Southampton"
+        ],
+        "homeTeamScore": 1,
+        "awayTeamScore": 1
+    },
+
+     {
+        "homeTeam": [
+            "Fulham"
+        ],
+        "awayTeam": [
+            "Arsenal"
+        ],
+        "homeTeamScore": 0,
+        "awayTeamScore": 1
+    }
+]
+
+
