@@ -10,6 +10,9 @@ import json
 import mysql.connector
 import PySimpleGUI as sg
 
+
+
+
 def writeData(newdata):
 
 
@@ -582,6 +585,7 @@ def linearRegression(homeTeam,awayTeam):
 
 
 
+
     except:
         sg.Popup("No dataset available")
 
@@ -679,6 +683,7 @@ def linearRegression(homeTeam,awayTeam):
         RMSE2 = sqrt(mean_squared_error(y_true=y_test, y_pred=y_prediction))
         #formatted_Away_RMSE2 = "{:.2f}".format(RMSE2)
         formatted_Away_RMSE2 = round(RMSE2)
+
        # print("\nPredicted amount of goals using Decision Tree Regression for {0}\nin their next game against {2} is: {1}".format(awayTeam, formatted_Away_RMSE2,homeTeam))
 
 
@@ -694,6 +699,19 @@ def linearRegression(homeTeam,awayTeam):
     print("-------------------------------------------")
     print("Predicted Match Score using Decision Tree Regression\n {0} : {1} - {2} : {3}".format(homeTeam,formatted_Home_RMSE2,awayTeam,formatted_Away_RMSE2))
 
+    #api(homeTeam, awayTeam, formatted_Home_RMSE2, formatted_Away_RMSE2)
+
+    predictions = [
+        {'homeTeam': homeTeam,
+         'awayTeam': awayTeam,
+         'homeTeamScore': formatted_Home_RMSE2,
+         'awayTeamScore': formatted_Away_RMSE2,
+         }
+    ]
+
+    import json
+    with open('json/predictions.json', 'a') as f:
+        json.dump(predictions, f)
 
 
 f = open('dataset/E0.csv','r')
@@ -745,3 +763,5 @@ try:
 
 except requests.exceptions.ConnectionError:
     r.status_code = "Connection refused"
+
+
