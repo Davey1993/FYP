@@ -1,0 +1,35 @@
+service: predictions-rest-api
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  region: eu-west-1 ##This can be changed to suit the location you are, eu-west-1 is Ireland
+  runtime: nodejs12.x
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource: "*"
+
+functions:
+  app:
+    handler: handler.app
+    events:
+      - http: any {proxy+} 
+
+resources:
+  Resources:
+    predictionsTable: ##Specifying DynamoDB usersTable
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: predictionsTable
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    

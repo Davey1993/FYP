@@ -40,7 +40,7 @@ def writeData(newdata):
         mydb = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="pw"
+            password="irule666"
         )
 
         print(mydb)
@@ -93,7 +93,7 @@ def updateData(newdata):
     mydb = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="pw"
+        password="irule666"
     )
 
     print(mydb)
@@ -171,7 +171,7 @@ def save():
     QUERY = 'SELECT * FROM premierLeague;'
     db = dbapi.connect(host="localhost",
         user="root",
-        password="pw")
+        password="irule666")
 
     cur = db.cursor()
     cur.execute("USE footballPrediction;")
@@ -710,8 +710,12 @@ def linearRegression(homeTeam,awayTeam):
     ]
 
     import json
-    with open('json/predictions.json', 'a') as f:
+    with open('json/predictions.json', 'w') as f:
         json.dump(predictions, f)
+
+
+
+
 
 
 f = open('dataset/E0.csv','r')
