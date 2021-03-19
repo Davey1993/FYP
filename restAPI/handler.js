@@ -24,15 +24,14 @@ app.use(bodyParser.json());
 //This adds a new prediction
 app.post("/predictions", async (req, res) => {
   const data = req.body;
-  data.forEach(async(value)=>{
-    const params = {
+  const params = {
       TableName: "predictionsTable",
       Item: {
         id: uuidv4(),
-        homeTeam: value.homeTeam,
-        awayTeam: value.awayTeam,
-        homeTeamScore: value.homeTeamScore,
-        awayTeamScore: value.awayTeamScore
+        homeTeam: data.homeTeam,
+        awayTeam: data.awayTeam,
+        homeTeamScore: data.homeTeamScore,
+        awayTeamScore: data.awayTeamScore
       },
     };
   
@@ -42,7 +41,7 @@ app.post("/predictions", async (req, res) => {
     } catch (e) {
       res.status(500).json({ error: e.message });
     }
-  })
+
 
 });
 

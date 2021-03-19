@@ -19,7 +19,7 @@ functions:
 
 resources:
   Resources:
-    predictionsTable: ##Specifying DynamoDB usersTable
+    predictionsTable: ##Specifying DynamoDB predictionsTable
       Type: AWS::DynamoDB::Table
       Properties:
         TableName: predictionsTable
