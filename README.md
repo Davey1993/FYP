@@ -78,5 +78,5 @@ Strike-rate currently stands at 50/50, however ongoing comparisons are taking pl
 ![](accuracy/21-02-2021/ArsenalManCity.PNG)
 ![](accuracy/21-02-2021/ManUtdNewcastle.PNG)
 
-<h1>Mobile Application</h1>
-Still in development with the help of django framework and ionic.
+<h1>Service</h1>
+This application was eventually deployed as a RESTful service with the help of Serverless Frameework & AWS Technology.
